@@ -1,35 +1,34 @@
-# boilerplates
+# jstransformer-duo
 
-This is a boilerplate for new transformers.
+[Duo](http://duojs.org) support for [JSTransformers](http://github.com/jstransformers).
 
-What you need to do:
-
-1. Add your name to `LICENSE.md` and `package.json`
-2. Activate Travis CI and Coveralls.
-3. Update module name in `package.json` and `README.md`
-4. Let the fun begin!
-
-# jstransformer-foo
-
-[Foo](http://example.com) support for [JSTransformers](http://github.com/jstransformers).
-
-[![Build Status](https://img.shields.io/travis/jstransformers/jstransformer-foo/master.svg)](https://travis-ci.org/jstransformers/jstransformer-foo)
-[![Coverage Status](https://img.shields.io/coveralls/jstransformers/jstransformer-foo/master.svg)](https://coveralls.io/r/jstransformers/jstransformer-foo?branch=master)
-[![Dependency Status](https://img.shields.io/david/jstransformers/jstransformer-foo/master.svg)](http://david-dm.org/jstransformers/jstransformer-foo)
-[![NPM version](https://img.shields.io/npm/v/jstransformer-foo.svg)](https://www.npmjs.org/package/jstransformer-foo)
+[![Build Status](https://img.shields.io/travis/jstransformers/jstransformer-duo/master.svg)](https://travis-ci.org/jstransformers/jstransformer-duo)
+[![Coverage Status](https://img.shields.io/coveralls/jstransformers/jstransformer-duo/master.svg)](https://coveralls.io/r/jstransformers/jstransformer-duo?branch=master)
+[![Dependency Status](https://img.shields.io/david/jstransformers/jstransformer-duo/master.svg)](http://david-dm.org/jstransformers/jstransformer-duo)
+[![NPM version](https://img.shields.io/npm/v/jstransformer-duo.svg)](https://www.npmjs.org/package/jstransformer-duo)
 
 ## Installation
 
-    npm install jstransformer-foo
+    npm install jstransformer-duo
 
 ## API
 
 ```js
-var foo = require('jstransformer')(require('jstransformer-foo'))
+var duo = require('jstransformer')(require('jstransformer-duo'))
 
-foo.render('blah').body
-//=> 'blah'
+var options = {
+  root: __dirname
+}
+
+duo.render('var a = 0;', options).body
+//=> Compiled source
 ```
+
+### Options
+
+#### root
+
+Matches the [`root`](https://github.com/duojs/duo/blob/master/docs/api.md#new-duoroot) directory when creating the Duo object.
 
 ## License
 

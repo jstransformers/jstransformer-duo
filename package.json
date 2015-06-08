@@ -1,7 +1,7 @@
 {
-  "name": "jstransformer-foo",
-  "version": "0.0.0",
-  "description": "Foo support for JSTransformers.",
+  "name": "jstransformer-duo",
+  "version": "0.0.1",
+  "description": "Duo support for JSTransformers.",
   "keywords": [
     "jstransformer"
   ],
@@ -17,8 +17,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jstransformers/jstransformer-foo.git"
+    "url": "https://github.com/jstransformers/jstransformer-duo.git"
   },
-  "author": "Your Name <email@example.com>",
-  "license": "MIT"
+  "author": "Rob Loach <robloach@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "duo": "^0.12.0"
+  },
+  "engines": {
+    "iojs": ">=2.2"
+  }
 }
