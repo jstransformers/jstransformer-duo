@@ -1,23 +1,54 @@
 'use strict';
 
 var Duo = require('duo');
+var extend = require('extend');
 
 exports.name = 'duo';
 exports.outputFormat = 'js';
 
-function createDuo(options) {
-  options = options || {};
-  if (!options.root) {
-    options.root = '.';
+function getOptions(options) {
+  var defaults = {
+    root: '.'
+  };
+  return extend({}, defaults, options);
+}
+
+function processDuo(duo, options) {
+  // Set any of the flags.
+  var opts = [
+    'development',
+    'cache',
+    'standalone',
+    'copy',
+    'concurrency',
+    'installTo',
+    'buildTo',
+    'token'
+  ];
+  for (var i in opts) {
+    var name = opts[i];
+    if (typeof options[name] !== 'undefined') {
+      duo[name](options[name]);
+    }
   }
-  return new Duo(options.root);
+
+  // TODO: Add duo.sourceMap() with output
+  // TODO: Add duo.array global(name)
+  // TODO: Add duo.include(name, src)
+  // TODO: Add duo.path(paths...) array
+  // TODO: Add duo.installPath(paths...) array
+  // TODO: Add duo.buildPath(paths...) array
+  // TODO: Add duo.use(fn|gen) support
+
+  return duo;
 }
 
 exports.renderAsync = function (str, options) {
   return new Promise(function (fulfill, reject) {
-    var duo = createDuo(options);
-    duo.entry(str, (options || {}).type || 'js');
-    duo.run(function (err, results) {
+    options = getOptions(options);
+    var duo = new Duo(options.root);
+    duo.entry(str, options.type || 'js');
+    processDuo(duo, options).run(function (err, results) {
       if (err) {
         return reject(err);
       }
@@ -30,9 +61,10 @@ exports.renderAsync = function (str, options) {
 
 exports.renderFileAsync = function (file, options) {
   return new Promise(function (fulfill, reject) {
-    var duo = createDuo(options);
+    options = getOptions(options);
+    var duo = new Duo(options.root);
     duo.entry(file);
-    duo.run(function (err, results) {
+    processDuo(duo, options).run(function (err, results) {
       if (err) {
         return reject(err);
       }
