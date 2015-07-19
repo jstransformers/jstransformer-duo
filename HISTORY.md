@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.1.0: 2015-07-19
+
+- Updated dependencies
+- Add `global` support
+
 ## v1.0.0: 2015-07-08
 
 - Updated dependencies

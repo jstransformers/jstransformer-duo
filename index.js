@@ -34,7 +34,6 @@ function processDuo(duo, options) {
   }
 
   // TODO: Add duo.sourceMap() with output
-  // TODO: Add duo.array global(name)
   // TODO: Add duo.include(name, src)
   // TODO: Add duo.path(paths...) array
   // TODO: Add duo.installPath(paths...) array
