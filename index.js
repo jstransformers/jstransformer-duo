@@ -23,11 +23,12 @@ function processDuo(duo, options) {
     'concurrency',
     'installTo',
     'buildTo',
-    'token'
+    'token',
+    'global'
   ];
   for (var i in opts) {
     var name = opts[i];
-    if (typeof options[name] !== 'undefined') {
+    if (name in options) {
       duo[name](options[name]);
     }
   }
