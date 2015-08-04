@@ -1,7 +1,7 @@
 'use strict';
 
 var Duo = require('duo');
-var extend = require('extend');
+var extend = require('extend-shallow');
 
 exports.name = 'duo';
 exports.outputFormat = 'js';

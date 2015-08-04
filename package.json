@@ -21,14 +21,10 @@
   },
   "dependencies": {
     "duo": "^0.14.0",
-    "extend": "^3.0.0"
+    "extend-shallow": "^2.0.1"
   },
   "engines": {
     "iojs": ">=2.2"
-  },
-  "author": {
-    "name": "JSTransformers Team",
-    "url": "http://github.com/orgs/jstransformers/people"
   },
   "author": {
     "name": "JSTransformers Team",
