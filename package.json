@@ -20,11 +20,11 @@
     "url": "https://github.com/jstransformers/jstransformer-duo.git"
   },
   "dependencies": {
-    "duo": "^0.14.0",
+    "duo": "^0.15.3",
     "extend-shallow": "^2.0.1"
   },
   "engines": {
-    "iojs": ">=2.2"
+    "iojs": "2.5.0"
   },
   "author": {
     "name": "JSTransformers Team",
