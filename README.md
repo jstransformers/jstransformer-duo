@@ -1,5 +1,7 @@
 # jstransformer-duo
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/jstransformers/jstransformer-duo.svg)](https://greenkeeper.io/)
+
 [Duo](http://duojs.org) support for [JSTransformers](http://github.com/jstransformers).
 
 [![Build Status](https://img.shields.io/travis/jstransformers/jstransformer-duo/master.svg)](https://travis-ci.org/jstransformers/jstransformer-duo)
