@@ -5,6 +5,7 @@
 [![Build Status](https://img.shields.io/travis/jstransformers/jstransformer-duo/master.svg)](https://travis-ci.org/jstransformers/jstransformer-duo)
 [![Coverage Status](https://img.shields.io/codecov/c/github/jstransformers/jstransformer-duo/master.svg)](https://codecov.io/gh/jstransformers/jstransformer-duo)
 [![Dependency Status](https://img.shields.io/david/jstransformers/jstransformer-duo/master.svg)](http://david-dm.org/jstransformers/jstransformer-duo)
+[![Greenkeeper badge](https://badges.greenkeeper.io/jstransformers/jstransformer-duo.svg)](https://greenkeeper.io/)
 [![NPM version](https://img.shields.io/npm/v/jstransformer-duo.svg)](https://www.npmjs.org/package/jstransformer-duo)
 
 ## Installation
