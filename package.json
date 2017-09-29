@@ -15,7 +15,9 @@
   "scripts": {
     "coverage": "test-jstransformer coverage",
     "test": "test-jstransformer",
-    "posttest": "xo --space --no-semicolon index.js"
+    "posttest": "xo --space --no-semicolon index.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "engines": {
     "node": ">=4"
@@ -26,11 +28,13 @@
   },
   "dependencies": {
     "duo": "^0.15.3",
-    "extend-shallow": "^2.0.1"
+    "extend-shallow": "^2.0.1",
+    "snyk": "^1.41.1"
   },
   "author": {
     "name": "JSTransformers Team",
     "url": "http://github.com/orgs/jstransformers/people"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "snyk": true
 }
