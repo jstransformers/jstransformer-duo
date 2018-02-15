@@ -15,7 +15,7 @@
 ## API
 
 ```js
-var duo = require('jstransformer')(require('jstransformer-duo'));
+var duo = require('jstransformer')(require('jstransformer-duo'))
 
 var options = {
   root: __dirname

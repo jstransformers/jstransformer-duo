@@ -58,17 +58,3 @@ exports.renderAsync = function (str, options) {
     })
   })
 }
-
-exports.renderFileAsync = function (file, options) {
-  return new Promise((resolve, reject) => {
-    options = getOptions(options)
-    const duo = new Duo(options.root)
-    duo.entry(file)
-    processDuo(duo, options).run((err, results) => {
-      if (err) {
-        return reject(err)
-      }
-      return resolve(results.code)
-    })
-  })
-}
