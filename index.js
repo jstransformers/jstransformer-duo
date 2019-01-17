@@ -54,6 +54,7 @@ exports.renderAsync = function (str, options) {
       if (err) {
         return reject(err)
       }
+
       return resolve(results.code)
     })
   })
