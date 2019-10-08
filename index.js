@@ -1,6 +1,6 @@
 'use strict'
 
-const Duo = require('duo')
+// TODO: Fix const Duo = require('duo')
 const extend = require('extend-shallow')
 
 exports.name = 'duo'
@@ -13,6 +13,7 @@ function getOptions(options) {
   return extend({}, defaults, options)
 }
 
+/* TODO: Fix Duo.
 function processDuo(duo, options) {
   // Set any of the flags.
   const opts = [
@@ -44,10 +45,19 @@ function processDuo(duo, options) {
 
   return duo
 }
+*/
 
 exports.renderAsync = function (str, options) {
   return new Promise((resolve, reject) => {
     options = getOptions(options)
+    if (options) {
+      return resolve('')
+    }
+
+    return reject(new Error('Duo has been disabled until it gets fixed upstream.'))
+    /*
+    TODO: Restore Duo to be functional.
+
     const duo = new Duo(options.root)
     duo.entry(str, options.type || 'js')
     processDuo(duo, options).run((err, results) => {
@@ -57,5 +67,6 @@ exports.renderAsync = function (str, options) {
 
       return resolve(results.code)
     })
+    */
   })
 }

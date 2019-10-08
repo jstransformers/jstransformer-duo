@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.0.0: 2019-10-07
+
+- Duo has been disabled until it's fixed in the upstream
+
 ## v1.3.0: 2018-06-10
 
 - Updated dependencies

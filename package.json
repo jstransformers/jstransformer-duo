@@ -1,6 +1,6 @@
 {
   "name": "jstransformer-duo",
-  "version": "1.3.0",
+  "version": "2.0.0",
   "description": "Duo support for JSTransformers.",
   "keywords": [
     "jstransformer"
@@ -24,7 +24,6 @@
     "url": "https://github.com/jstransformers/jstransformer-duo.git"
   },
   "dependencies": {
-    "duo": "^0.15.7",
     "extend-shallow": "^3.0.2"
   },
   "author": {
